@@ -1,0 +1,93 @@
+/* File: src/app/components/character-list/character-list.component.scss */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.character-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.character-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  width: calc(50% - 1rem); /* Two cards per row */
+  box-sizing: border-box;
+  overflow: hidden; /* Ensure content does not overflow */
+  background-color: #fff;
+  transition: transform 0.2s;
+}
+
+.character-card:hover {
+  transform: scale(1.05);
+}
+
+.character-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.character-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow details to take up remaining space */
+}
+
+.character-details h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.character-details p {
+  margin: 0.25rem 0;
+}
+
+.character-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.character-status {
+  color: #007bff;
+}
+
+.character-species {
+  color: #28a745;
+}
+
+.character-gender {
+  color: #dc3545;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.pagination button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  margin: 0 0.5rem;
+}
